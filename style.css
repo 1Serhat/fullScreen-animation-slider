@@ -1,0 +1,114 @@
+:root{
+    --primary-color: #f39c12;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.slide{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.slider:nth-child(1){
+    background: url('/images/iphone3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slider:nth-child(2){
+    background: url('/images/iphone2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slider:nth-child(3){
+    background: url('/images/iphone1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slider{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    z-index: -1;
+}
+.slide .active{
+    display: flex;
+}
+.container{
+    width: 1000px;
+    margin: 10% 10%;
+}
+
+.container .caption{
+    width: 50%;
+    
+}
+.container .caption h1{
+    color: #fff;
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+.container .caption p{
+    color: #fff;
+    margin: 30px auto;
+    line-height: 1.7;
+    font-size: 18px;
+}
+.container .caption .btn{
+    background-color: var(--primary-color);
+    padding: 15px 50px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.home .controller .prev, 
+.home .controller .next{
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    font-size: 40px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+.home .controller .prev:hover, 
+.home .controller .next:hover{
+    color: var(--primary-color);
+}
+
+.home .controller .prev{
+    left: 0;
+}
+.home .controller .next{
+    right: 0;
+}
+
+@media (max-width: 800px){
+    .container .caption h1 {
+        display: none;
+    }
+    .container .caption p{
+        display: none;
+    }
+    .container .caption .btn{
+        display: none;
+    }
+    .slider:nth-child(1){
+        background-position-x: -600px;
+    }
+    .slider:nth-child(2){
+        background-position-x: -680px;
+    }
+}
